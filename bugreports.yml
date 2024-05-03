@@ -1,0 +1,129 @@
+---
+- summary: |
+    ----------------------------------------bugreport ID 1 -----------------------------------------
+    
+    Кнопка "Cart" имеет разный размер в разных локалях.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1. Включить режим веб-инспектора DevTools нажав клавишу F12
+    2. В режиме Select выделить кнопку "Cart" ("Корзина")
+    3. Оценить размер кнопки
+    4. В верхнем меню сайта перейти на другой язык
+    5. Оценить размер кнопки
+    6. Сравнить размеры кнопки в разных локалях
+  expected-result: |
+    Кнопки должны иметь одинаковый размер.
+  actual-result: |
+    Кнопки имеют разный размер.
+  severity: trivial
+  
+- summary: |
+    ----------------------------------------bugreport ID 2 -----------------------------------------
+    
+    Отсутствует выбор товара по цвету.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1 Выбрать Brand Huawei
+    2 Выбрать карточку Huawei P30
+  expected-result: |
+    Должна появится форма выбора цвета товара.
+  actual-result: |
+    Нет формы выбора цвета товара.
+  severity: minor
+  
+- summary: |
+    ----------------------------------------bugreport ID 3 -----------------------------------------
+    Отсутствует мобильная версия сайта.  
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+  steps-to-reproduce: |
+    1. Открыть страницу магазина https://m.hexlet-products-store.vercel.app
+  expected-result: |
+    Должна запуститься мобильная версия сайта.
+  actual-result: |
+    Мобильная версия сайта не запускается.
+  severity: major
+  
+- summary: |
+    ----------------------------------------bugreport ID 4 -----------------------------------------
+    
+    Единицы товара "шт." в корзине не на своем месте.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1. Открыть страницу магазина https://m.hexlet-products-store.vercel.app
+    2. Выбрать любой товар
+    3. Добавить товар в корзину 3 (три) раза
+  expected-result: |
+    В корзине должно отобразиться "3 шт.".
+  actual-result: |
+    В корзине отображается "3".
+    Единицы товара "шт." отображаются рядом с артикулом товара.
+  severity: major
+
+- summary: |
+    ----------------------------------------bugreport ID 5 -----------------------------------------
+    
+    Главная страница не имеет отступа слева в режиме Desktop.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1. Открыть главную страничку магазина
+  expected-result: |
+    Страничка должна иметь отспут слева, такой же как и справа.
+  actual-result: |
+    Отступ слева отсутствует.
+  severity: trivial
+
+- summary: |
+    ----------------------------------------bugreport ID 6 -----------------------------------------
+    
+    Слипание цены, скидки и атикула при мобильном отображении.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1. Открыть страницу магазина
+    2. Открыть DevTools нажав Ctrl + Shift + I
+    3. Открыть Toggle device toolbar нажав Ctrl + Shift + M
+    4. Выбрать iPhone SE
+  expected-result: |
+    Цена, скидка и артикул должны отображаться раздельно.
+  actual-result: |
+    Слипание цены, скидки и атикула.
+  severity: minor
+  
+- summary: |
+    ----------------------------------------bugreport ID 7 -----------------------------------------
+    
+    Лишняя кнопка "Previous" на главной (первой) странице сайта.
+    
+  environment: |
+    OS Windows 11 Версия 23H2
+    Web browser Firefox Версия 125.0.3
+    Website страница магазина https://hexlet-products-store.vercel.app
+  steps-to-reproduce: |
+    1. Открыть главную страничку магазина
+  expected-result: |
+    На первой стрвнице не может быть кнопки "Previous" ("Предыдущая").
+  actual-result: |
+    На первой странице кнопка "Previous" ("Предыдущая").
+  severity: minor
